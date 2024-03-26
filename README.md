@@ -4,6 +4,8 @@ What Does This Do?
 This program calculates the trajectory of a projectile based on its location in the world using Visual Crossing's Weather API.
 It usues the average daily weather prediction of that day as it does use the weather forecast for the next 15 days including today. (16 days total)
 
+Hardcoded into calcD function is 0.6 and 0.0446831364. 0.6 is drag coefficient of a basketball along with 0.0446831364 being the reference area of a basketball. The projectile in this case is a basketball, however, it can be any weight you want it to be and travel as fast as you want. If you wanted to change the object, you would need to change these two numbers to your specifications.
+
 Variables used to calculate the trajectory:
 - Humidity
 - Temperature
