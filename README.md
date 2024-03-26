@@ -15,7 +15,7 @@ Variables used to calculate the trajectory:
 
 Output
 - In terminal the program outputs the x and y coordinates every .1s the projectile travels
-- At the end of the program it will take you to a turtle screen that displays the trajectory of the projectile
+- At the end of the program it will take you to a graph displaying the trajectory of the projectile
 
 Purpose
 -
