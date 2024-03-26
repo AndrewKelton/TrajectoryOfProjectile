@@ -85,7 +85,7 @@ def calcD(a, v, w, weight):
     lang = math.radians(a)
     wS = float(w.wS)
     wD = math.radians(float(w.wD))
-    t_int = 0.1
+    t_int = 0.01
 
     t=0
     xvals=[]
@@ -93,6 +93,11 @@ def calcD(a, v, w, weight):
     yC = 0
     while True:
         rho = calcAirD(w, yvals[-1] if yvals else 0)
+
+        F_drag = 0.5 * 0.6 * 0.0446831364 * rho * (v**2)
+        F_g = weight * g
+        accel = (F_g - F_drag) / weight
+        v += accel * t_int
 
         wH = wS * math.cos(wD)
         wV = wD * math.sin(wD)
@@ -141,7 +146,7 @@ def main():
 
     xvals, yvals, t_int = calcD(angle, v0, wL[day], weight)
     for i in range(len(xvals)):
-        print("Time: %.1f" % (float(i) * float(t_int)), "s, Position: (%.2f, %.2f)" % (xvals[i], yvals[i]))
+        print("Time: %.2f" % (float(i) * float(t_int)), "s, Position: (%.2f, %.2f)" % (xvals[i], yvals[i]))
 
     plt.plot(xvals, yvals)
     plt.xlabel('Distance (m)')
