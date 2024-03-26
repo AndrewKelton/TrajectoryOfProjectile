@@ -6,6 +6,8 @@ It usues the average daily weather prediction of that day as it does use the wea
 
 Hardcoded into calcD function is 0.6 and 0.0446831364. 0.6 is the drag coefficient of a basketball along with 0.0446831364 being the reference area of a basketball. The projectile in this case is a basketball, however, it can be any weight you want it to be and travel as fast as you want. If you wanted to change the object, you would need to change these two numbers to your specifications.
 
+Program assumes user inputs correct data types
+
 Variables used to calculate the trajectory:
 - Humidity
 - Temperature
@@ -14,6 +16,11 @@ Variables used to calculate the trajectory:
 - Initial velocity
 - Weight
 - Angle at initial velocity
+- Air density
+- Density of object
+- Drag coefficient
+- Drag on object
+- Lapse rate
 
 Output
 - In terminal the program outputs the x and y coordinates every .1s the projectile travels
